@@ -22,16 +22,14 @@ public class Main {
         FloorConfig secondFloorConfig =
                 new FloorConfig(GameType.PACHINKO_MACHINE,
                         GameType.PACHINKO_MACHINE, ServiceType.SHOP);
-        AvailableFloor firstFloor = new FirstFloor(firstFloorConfig);
-        AvailableFloor secondFloor = new SecondFloor(new FloorConfig(GameType.PACHINKO_MACHINE));
-        AvailableFloor thirdFloor = new ThirdFloor(secondFloorConfig);
-        AvailableFloor forthFloor = new FourthFloor(secondFloorConfig);
 
-        Elevator elevator = new Elevator(firstFloor, secondFloor, thirdFloor, forthFloor);
+        Elevator elevator = new Elevator();
 
-//        elevator.goToFloor(2); // 1, skipping 2, 3
-//        elevator.goToFloor(1); // 3, 2, 1
-//        elevator.goToFloor(4); // 1, 2, 3, 4
+        AvailableFloor _firstFloor = new FirstFloor(firstFloorConfig, elevator);
+        AvailableFloor _secondFloor = new SecondFloor(new FloorConfig(GameType.PACHINKO_MACHINE), elevator);
+        UnavailableFloor _thirdFloor = new ThirdFloor(secondFloorConfig, elevator);
+        AvailableFloor _fourthFloor = new FourthFloor(secondFloorConfig, elevator);
 
+        elevator.goToFloor(4);
     }
 }

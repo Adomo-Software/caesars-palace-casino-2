@@ -5,13 +5,14 @@ import com.adomasda.FloorConfig;
 
 public abstract class Floor {
     FloorConfig floorConfig;
-    private int number;
+    private final int number;
 
-    Floor(FloorConfig floorConfig, int number) {
+    Floor(FloorConfig floorConfig, Elevator elevator, int number) {
         this.floorConfig = floorConfig;
         this.number = number;
     }
 
-    abstract boolean isAvailable();
-    int getNumber() { return this.number; }
+    public int getNumber() {
+        return this.number;
+    }
 }

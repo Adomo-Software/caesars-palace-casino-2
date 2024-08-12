@@ -4,12 +4,8 @@ import com.adomasda.Elevator;
 import com.adomasda.FloorConfig;
 
 public class AvailableFloor extends Floor {
-    AvailableFloor(FloorConfig floorConfig, int number) {
-        super(floorConfig, number);
-    }
-
-    @Override
-    public boolean isAvailable() {
-        return true;
+    public AvailableFloor(FloorConfig floorConfig, Elevator elevator, int number) {
+        super(floorConfig, elevator, number);
+        elevator.addAvailableFloor(this);
     }
 }

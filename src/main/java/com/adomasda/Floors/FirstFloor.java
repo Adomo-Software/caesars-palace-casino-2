@@ -4,7 +4,7 @@ import com.adomasda.Elevator;
 import com.adomasda.FloorConfig;
 
 public class FirstFloor extends AvailableFloor {
-    public FirstFloor(FloorConfig floorConfig) {
-        super(floorConfig, 1);
+    public FirstFloor(FloorConfig floorConfig, Elevator elevator) {
+        super(floorConfig, elevator, 1);
     }
 }
