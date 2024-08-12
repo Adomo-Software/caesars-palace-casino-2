@@ -1,12 +1,12 @@
 package com.adomasda;
 
-import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class FloorConfig {
-    private final ArrayList<Object> floorElements;
+    private final List<Object> floorElements;
 
     public FloorConfig(Object... floorElements) {
-        this.floorElements = new ArrayList<>(Arrays.asList(floorElements));
+        this.floorElements = Arrays.asList(floorElements);
     }
 }

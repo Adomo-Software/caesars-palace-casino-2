@@ -4,7 +4,7 @@ import com.adomasda.Elevator;
 import com.adomasda.FloorConfig;
 
 public abstract class Floor {
-    FloorConfig floorConfig;
+    private FloorConfig floorConfig;
     private final int number;
 
     Floor(FloorConfig floorConfig, Elevator elevator, int number) {

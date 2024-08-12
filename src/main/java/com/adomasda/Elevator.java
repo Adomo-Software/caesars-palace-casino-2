@@ -6,10 +6,11 @@ import com.adomasda.Floors.UnavailableFloor;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 public class Elevator {
 
-    public ArrayList<Integer> availableFloors = new ArrayList<>();
+    public List<Integer> availableFloors = new ArrayList<>();
     public HashMap<Integer ,Floor> unavailableFloors = new HashMap<>();
 
     public void addAvailableFloor(AvailableFloor availableFloor) {

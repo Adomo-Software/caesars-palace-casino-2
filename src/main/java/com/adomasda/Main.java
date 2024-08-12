@@ -25,10 +25,10 @@ public class Main {
 
         Elevator elevator = new Elevator();
 
-        AvailableFloor _firstFloor = new FirstFloor(firstFloorConfig, elevator);
-        AvailableFloor _secondFloor = new SecondFloor(new FloorConfig(GameType.PACHINKO_MACHINE), elevator);
-        UnavailableFloor _thirdFloor = new ThirdFloor(secondFloorConfig, elevator);
-        AvailableFloor _fourthFloor = new FourthFloor(secondFloorConfig, elevator);
+        AvailableFloor firstFloor = new FirstFloor(firstFloorConfig, elevator);
+        AvailableFloor secondFloor = new SecondFloor(new FloorConfig(GameType.PACHINKO_MACHINE), elevator);
+        UnavailableFloor thirdFloor = new ThirdFloor(secondFloorConfig, elevator);
+        AvailableFloor fourthFloor = new FourthFloor(secondFloorConfig, elevator);
 
         elevator.goToFloor(4);
     }
